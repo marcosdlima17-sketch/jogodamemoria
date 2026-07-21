@@ -4,6 +4,7 @@ namespace JogoDaMemoria
 {
     public class Jogo
     {
+        Pontuacao pontuacao = new Pontuacao();
         public void Iniciar()
         {
             int dimensao = 4; // Tabuleiro 4x4 (8 pares)
@@ -36,6 +37,7 @@ namespace JogoDaMemoria
                 {
                     Console.WriteLine("\n✨ PAR ENCONTRADO! Excelente!");
                     placar.RegistrarTentativa(acertou: true);
+                    Pontuacao.pontuacao();
                     Util.PausarSegundos(1);
                 }
                 else
