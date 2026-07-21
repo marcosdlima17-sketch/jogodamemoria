@@ -38,6 +38,7 @@ namespace JogoDaMemoria
                     Console.WriteLine("\n✨ PAR ENCONTRADO! Excelente!");
                     placar.RegistrarTentativa(acertou: true);
                     Pontuacao.pontuacao();
+                    Pontuacao.MostraPontuacao();
                     Util.PausarSegundos(1);
                 }
                 else
