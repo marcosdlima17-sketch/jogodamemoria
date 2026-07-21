@@ -41,3 +41,7 @@ public int ObterPontuacao()
 return pontuacao;
 }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> d646982a549a973ddd487684c62c527ba1f33a82
