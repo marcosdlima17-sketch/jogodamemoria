@@ -4,7 +4,6 @@ namespace JogoDaMemoria
 {
     public class Jogo
     {
-        Pontuacao pontuacao = new Pontuacao();
         public void Iniciar()
         {
             int dimensao = 4; // Tabuleiro 4x4 (8 pares)
@@ -30,15 +29,13 @@ namespace JogoDaMemoria
                 DesenharCabecalho(tabuleiro, placar);
 
                 // Verificação de Par
-                Carta carta1 = tabuleiro.ObterCarta(l1, c1);
-                Carta carta2 = tabuleiro.ObterCarta(l2, c2);
+                Tabuleiro.Carta carta1 = tabuleiro.ObterCarta(l1, c1);
+                Tabuleiro.Carta carta2 = tabuleiro.ObterCarta(l2, c2);
 
                 if (carta1.Valor == carta2.Valor)
                 {
                     Console.WriteLine("\n✨ PAR ENCONTRADO! Excelente!");
                     placar.RegistrarTentativa(acertou: true);
-                    Pontuacao.pontuacao();
-                    Pontuacao.MostraPontuacao();
                     Util.PausarSegundos(1);
                 }
                 else
