@@ -26,6 +26,7 @@ namespace JogoDaMemoria
 
         public void ExibirPlacar()
         {
+            Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine("\n--- PLACAR ---");
             Console.WriteLine($"Pares Encontrados: {ParesEncontrados} / {TotalPares}");
             Console.WriteLine($"Tentativas:        {Tentativas}");
