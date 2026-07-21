@@ -34,14 +34,14 @@ namespace JogoDaMemoria
 
                 if (carta1.Valor == carta2.Valor)
                 {
-                    Console.ForegroudColor = ConsoleColor.DarkYellow;
+                    Console.ForegroundColor = ConsoleColor.DarkYellow;
                     Console.WriteLine("\n✨ PAR ENCONTRADO! Excelente!");
                     placar.RegistrarTentativa(acertou: true);
                     Util.PausarSegundos(1);
                 }
                 else
                 {
-                    Console.ForegroudColor = ConsoleColor.DarkRed;
+                    Console.ForegroundColor = ConsoleColor.DarkRed;
                     Console.WriteLine("\n❌ Que pena! As cartas não coincidem.");
                     placar.RegistrarTentativa(acertou: false);
                     Util.PausarSegundos(2);
@@ -54,7 +54,7 @@ namespace JogoDaMemoria
 
             // Tela de Vitória
             Util.LimparTela();
-            Console.ForegroudColor = ConsoleColor.Cyan;
+            Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine("🎉 PARABÉNS! VOCÊ VENCEU O JOGO! 🎉");
             tabuleiro.Exibir(revelarTudo: true);
             Console.WriteLine($"\nPontuação Final: {placar.CalcularPontosFinais()} pontos em {placar.Tentativas} tentativas.\n");
@@ -63,6 +63,7 @@ namespace JogoDaMemoria
         private void DesenharCabecalho(Tabuleiro tabuleiro, Pontuacao placar)
         {
             Util.LimparTela();
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("===============================");
             Console.WriteLine("     JOGO DA MEMÓRIA (C#)      ");
             Console.WriteLine("===============================");
